@@ -11,6 +11,9 @@ function generatePassword(length, uppercase, lowercase, numbers, symbols) {
     if(lowercase) characters += lowercaseChars;
     if(numbers) characters += numberChars;
     if(symbols) characters += symbolChars;
+
+    if (characters.length === 0) return "Select at least one option";
+
     let password = "";
 
     for(let i = 0; i < length; i++) {
